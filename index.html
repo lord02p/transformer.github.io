@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font-changer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+   list-style: none;
+}
+
+
+/*                      nav-bar             */
+
+
+.logo h1{
+    font-size: 1.8vw;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    max-height: 4.2rem;
+    background-color:rgb(247, 69, 102);
+    height: 4.2rem;
+    gap: 5%;
+    padding-left: 3%;
+    padding-right: 1%;
+
+
+}
+.navbar .logo{
+    color: white;
+    cursor: pointer;
+    font-size: 100%;
+}
+.inputbar input{
+    width: 60vw;
+    height: 2.4rem;
+    max-height: 2.4rem;
+    cursor: pointer;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 3px;
+    letter-spacing: 0.7px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.inputbar input:hover{
+    box-shadow: none;
+}
+
+.btns{
+    padding: 17% 41%;
+    border: 1px solid white;
+    background: no-repeat;
+    border-radius: 4px;
+    font-size: 100%;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.btns:hover{
+   box-shadow: none;
+}
+ /*                                                 body                                                 */ 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #bcbcbc;
+    padding: 1rem 1rem;
+    align-items: start;
+    background: #eef0f3;
+  
+}
+ .fcontainer{
+     display: flex;
+     align-items: center;
+     width: 100%;
+ }
+ .fcontainer .result {
+    font-family: 'Source Code Pro';
+    width: 60%;
+    height: 6vh;
+    padding: 0px 0px 0px 11px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+ }
+ .fcontainer .big_text {
+    width: 60%;
+    height: 6vh;
+    padding: 0px 0px 0px 11px;
+    font-size: 1.6rem;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 8px;
+ }
+ .container .fontName{
+    color: #555555;
+    margin: 0px 31px 0px 9px;
+ }
+
+
+
+ .btn{
+    width: 14%;
+    height: 2.6rem;
+    border: 1px solid #666565;
+    font-size: 1.2vw;
+    position: absolute;
+    right: 4%;
+    border-radius: 4px;
+    background: rgb(247, 69, 102);
+    color: white;
+    cursor: pointer;
+ }
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.footer{
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(22, 22, 22);
+    color: white;
+    font-size: 0.6rem;
+}
+
+/*      mediaq     */
+@media screen and (max-width:951px) {
+    .navbar{
+        padding-left: 2%;
+        padding-right: 2%;
+        gap: 3%;
+    }
+    .btn{
+        width: 15%;
+        font-size: 90%;
+    }
+    .container{
+        padding: 1rem 0.5rem;
+    }
+}
+@media screen and (max-width:872px) {
+    .fcontainer .result{
+        width: 55%;
+        font-size: 1.1rem;
+    }
+   .container .big_text{
+        width: 55%;
+        font-size: 1.1rem;
+    }
+    .container .fontName{
+        margin: 0px 12px 0px 9px;
+    }
+    .navbar .logo{
+        font-size: 1.8vw;
+    }
+    .btn{
+        font-size: 1.5vw;
+    }
+}
+@media screen and (max-width:689px) {
+    .btn{
+        height: 2.5rem;
+        width:15%;
+        font-size: 1.4vw;
+    }
+    .btns{
+        padding: 14% 33%;
+    }
+    .inputbar input {
+        width: 59vw;
+    }
+    .container .fontName{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width:566px) {
+    .inputbar input{
+        height: 2.2rem;
+    }
+    .btns{
+        padding: 13% 26%;
+        font-size: 97%;
+    }
+    .btn{
+        height: 2.3rem;
+width: 15%;
+font-size: 1.5vw;
+    }
+    .container {
+        padding: 1rem 0.3rem;
+    }
+    .fcontainer .result{
+        font-size: 1rem;
+    }
+    .inputbar input {
+        width: 58vw;
+    }
+}
+
+@media screen and (max-width:473px) {
+    .inputbar input{
+        font-size: 14px;
+        width: 56vw;
+    }
+    .btns {
+        padding: 12% 23%;
+        font-size: 95%;
+    }
+    .fcontainer .result {
+        font-size: 14px;
+        height: 5.5vh;
+    }
+    .fcontainer .big_text {
+        font-size: 14px;
+        height: 5.5vh;
+    }
+    .container .fontName {
+        margin: 0px 12px 0px 3px;
+    }
+}
+
+@media screen and (max-width:408px) {
+    span{
+        font-size: 11px;
+    }
+    .inputbar input {
+        font-size: 11px;
+        height: 2rem;
+    }
+    .fcontainer .result {
+        font-size: 11px;
+        height: 5vh;
+    }
+    .btn {
+        height: 1.9rem;
+        width: 16%;
+        font-size: 1.5vw;
+    }
+    .btns {
+        padding: 10% 20%;
+        font-size: 91%;
+    }
+  
+}
+@media screen and (max-width:380px) {
+    .navbar{
+        gap: 2%;
+        height: 4rem;
+        max-height: 4rem;
+    }
+    .fcontainer .result {
+        font-size: 10px;
+        max-height: 5vh;
+        min-height: 5vh;
+    }
+}
+@media screen and (max-width:338px) {
+    .btns{
+        font-size: 83%;
+    }
+    .inputbar input {
+        font-size: 10px;
+        height: 1.7rem;
+        margin-left: 3px;
+    }
+    .btn {
+        height: 1.5rem;
+        width: 17%;
+        font-size: 1.6vw;
+    }
+    .fcontainer{
+        height: 2rem;
+        max-height: 2rem;
+    }
+    .fcontainer .result {
+        font-size: 9px;
+        height: 4.5vh;
+        min-height: 4.5vh;
+    }
+    .fcontainer .big_text {
+        font-size: 9px;
+        height: 4.5vh;
+    }
+    .container .fontName {
+        margin: 0px 8px 0px 3px;
+    }
+}
+@media screen and (max-width:300px) {
+
+    .btn {
+        height: 1.4rem;
+        width: 17%;
+        font-size: 1.6vw;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .fcontainer .result {
+        max-height: 4vh;
+        min-height: 4vh;
+    }
+
+      span {
+        font-size: 9px;
+      }
+      .fcontainer .result {
+        font-size: 8px;
+        height: 4vh;
+      }      
+      .fcontainer .big_text {
+        font-size: 8px;
+        height: 4vh;
+      }      
+      .navbar {
+        gap: 2%;
+        height: 3rem;
+        max-height: 3rem;
+      }
+      .inputbar input {
+        font-size: 9px;
+        height: 1.4rem;
+        width: 54vw;
+      }
+      .btns {
+        font-size: 70%;
+      }
+      .navbar .logo {
+        font-size: 1.9vw;
+      }
+}
+@media screen and (max-width:250px) {
+    .inputbar input {
+        font-size: 7px;
+        height: 1.4rem;
+        width: 52vw;
+    }
+    .btns {
+        font-size: 60%;
+    }
+    .btn {
+        height: 1.4rem;
+        width: 18%;
+        font-size: 1.8vw;
+    }
+    .fcontainer .result {
+        max-height: 4vh;
+        min-height: 4vh;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+           <div class="logo"><h2>TRANSFORMER</h2></div>
+           <div class="inputbar"> 
+                </span>
+               <input id="inputf" type="text" placeholder="Enter your text">
+           </div>
+           <a href="#"><button class="btns">About</button></a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="container">
+            <div class="fcontainer">
+            <span>⚫</span>
+            <p class="fontName">Anybody</p> 
+            <input type="text" id ="f1result" class="result" style="font-family: 'Anybody';">
+            <button id="copyone" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Josefin Sans</p>
+            <input type="text" style="font-family: 'Josefin Sans';" id ="f2result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+         
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Source Code Pro</p>
+           <input type="text" id="f3result" class="result" style="font-family: 'Source Code Pro';">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+        </section>
+
+        
+
+        
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Unica One</p>
+            <input type="text" style="font-family: 'Unica One' " id ="f4result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+        
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Quantico</p>
+            <input type="text" style="font-family: 'Quantico' " id ="f5result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+
+
+        
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Staatliches</p>
+            <input type="text" style="font-family: 'Staatliches' " id ="f6result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Send Flowers</p>
+            <input type="text" id ="f7result" class="big_text" style="font-family: 'Send Flowers';">
+            <button id="copytwo" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Lavishly Yours</p>
+            <input type="text" style="font-family: 'Lavishly Yours' ;" id ="f8result" class="big_text">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Ingrid Darling</p>
+            <input type="text" style="font-family: 'Ingrid Darling';" id ="f9result" class="big_text">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+        
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Babylonica</p>
+            <input type="text" style="font-family: 'Babylonica' " id ="f10result" class="big_text">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+        
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Tangerine</p>
+            <input type="text" style="font-family: 'Tangerine' " id ="f11result" class="big_text">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+         
+        </section>
+
+
+        
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Shadows Into Light</p>
+            <input type="text" style="font-family: 'Shadows Into Light';" id ="f12result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Indie Flower</p>
+            <input type="text" style="font-family: 'Indie Flower';" id ="f13result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+    
+        </section>
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Alumni Sans</p>
+            <input type="text" style="font-family: 'Alumni Sans Inline One';" id ="f14result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Lobster</p>
+            <input type="text" style="font-family: 'Lobster';" id ="f15result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Anton</p>
+            <input type = "text" style="font-family: 'Anton';" id ="f16result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Palette Mosaic</p>
+            <input type="text" style="font-family: 'Palette Mosaic';" id ="f17result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+      
+        </section>
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Permanent Maker</p>
+            <input type="text" style="font-family: 'Permanent Marker' " id ="f18result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+
+        </section>
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Alfa Slab One</p>
+            <input type="text" style="font-family: 'Alfa Slab One' " id ="f19result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Amatic SC</p>
+            <input type="text" style="font-family: 'Amatic SC' " id ="f20result" class="big_text">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Cinzel</p>
+            <input type="text" style="font-family: 'Cinzel' " id ="f21result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+         
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Courgette</p>
+                <input type="text" style="font-family: 'Courgette' " id ="f22result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Rubik Glitch</p>
+            <input type="text" style="font-family: 'Rubik Glitch' " id ="f23result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Rubik Puddles</p>
+            <input type="text" style="font-family: 'Rubik Puddles' " id ="f24result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Rubik Moonrocks</p>
+            <input type="text" style="font-family: 'Rubik Moonrocks' " id ="f25result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Rubik Wet Paint</p>
+            <input type="text" style="font-family: 'Rubik Wet Paint' " id ="f26result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+
+        </section>
+
+
+
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Orbitron</p>
+            <input type="text" style="font-family: 'Orbitron' " id ="f34result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+  
+        </section>
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Grape Nuts</p>
+            <input type="text" style="font-family: 'Grape Nuts' " id ="f27result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+
+        </section>
+
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Grape Nuts</p>
+            <input type="text" style="font-family: 'Special Elite' " id ="f28result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Press Start 2P</p>
+            <input type="text" style="font-family: 'Press Start 2P' " id ="f29result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Mali</p>
+            <input type="text" style="font-family: 'Mali' " id ="f30result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+          
+        </section>
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Homemade Apple</p>
+            <input type="text" style="font-family: 'Homemade Apple' " id ="f31result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+         
+        </section>
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Rock Salt</p>
+            <input type="text" style="font-family: 'Rock Salt' " id ="f32result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+           
+        </section>
+
+
+
+
+
+        <section class="container">
+            <div class="fcontainer">
+                <span>⚫</span>
+                <p class="fontName">Damion</p>
+            <input style="font-family: 'Damion' " id ="f33result" class="result">
+            <button id="copythree" class="btn"> + Add To Copy Text</button>
+        </div>
+        </section>
+
+
+
+
+    </main>
+
+ <script>
+     let f1result = document.querySelector('#f1result');
+let f2result = document.querySelector('#f2result');
+let f3result = document.querySelector('#f3result');
+let f4result = document.querySelector('#f4result');
+let f5result = document.querySelector('#f5result');
+let f6result = document.querySelector('#f6result');
+let f8result = document.querySelector('#f8result');
+let f7result = document.querySelector('#f7result');
+let f9result = document.querySelector('#f9result');
+let f10result = document.querySelector('#f10result');
+let f11result = document.querySelector('#f11result');
+let f12result = document.querySelector('#f12result');
+let f13result = document.querySelector('#f13result');
+let f14result = document.querySelector('#f14result');
+let f15result = document.querySelector('#f15result');
+let f16result = document.querySelector('#f16result');
+let f17result = document.querySelector('#f17result');
+let f18result = document.querySelector('#f18result');
+let f19result = document.querySelector('#f19result');
+let f20result = document.querySelector('#f20result');
+let f21result = document.querySelector('#f21result');
+let f22result = document.querySelector('#f22result');
+let f23result = document.querySelector('#f23result');
+let f24result = document.querySelector('#f24result');
+let f25result = document.querySelector('#f25result');
+let f26result = document.querySelector('#f26result');
+let f27result = document.querySelector('#f27result');
+let f28result = document.querySelector('#f28result');
+let f29result = document.querySelector('#f29result');
+let f30result = document.querySelector('#f30result');
+let f31result = document.querySelector('#f31result');
+let f32result = document.querySelector('#f32result');
+let f33result = document.querySelector('#f33result');
+let f34result = document.querySelector('#f34result');
+
+let inputf = document.querySelector('#inputf');
+//  value bypass
+
+inputf.value = 'Hey, Please Enter Your Text...';
+inputf.addEventListener('keyup',()=>{
+   f1result.value = inputf.value;
+   f2result.value = inputf.value;
+   f3result.value = inputf.value;
+   f4result.value = inputf.value;
+   f5result.value = inputf.value;
+   f6result.value = inputf.value;
+   f7result.value = inputf.value;
+   f8result.value = inputf.value;
+   f9result.value = inputf.value;
+   f10result.value = inputf.value;
+   f11result.value = inputf.value;
+   f12result.value = inputf.value;
+   f13result.value = inputf.value;
+   f14result.value = inputf.value;
+   f15result.value = inputf.value;
+   f16result.value = inputf.value;
+   f17result.value = inputf.value;
+   f18result.value = inputf.value;
+   f19result.value = inputf.value;
+   f20result.value = inputf.value;
+   f21result.value = inputf.value;
+   f22result.value = inputf.value;
+   f23result.value = inputf.value;
+   f24result.value = inputf.value;
+   f25result.value = inputf.value;
+   f26result.value = inputf.value;
+   f27result.value = inputf.value;
+   f28result.value = inputf.value;
+   f29result.value = inputf.value;
+   f30result.value = inputf.value;
+   f31result.value = inputf.value;
+   f32result.value = inputf.value;
+   f33result.value = inputf.value;
+   f34result.value = inputf.value;
+   
+})
+
+
+document.querySelectorAll('button')[1].addEventListener('click',function(event) {
+    event.preventDefault();
+    f1result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[2].addEventListener('click',function(event) {
+    event.preventDefault();
+    f2result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[3].addEventListener('click',function(event) {
+    event.preventDefault();
+    f3result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[4].addEventListener('click',function(event) {
+    event.preventDefault();
+    f4result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[5].addEventListener('click',function(event) {
+    event.preventDefault();
+    f5result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[6].addEventListener('click',function(event) {
+    event.preventDefault();
+    f6result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[7].addEventListener('click',function(event) {
+    event.preventDefault();
+    f7result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[8].addEventListener('click',function(event) {
+    event.preventDefault();
+    f8result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[9].addEventListener('click',function(event) {
+    event.preventDefault();
+    f9result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[10].addEventListener('click',function(event) {
+    event.preventDefault();
+    f10result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[11].addEventListener('click',function(event) {
+    event.preventDefault();
+    f11result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[12].addEventListener('click',function(event) {
+    event.preventDefault();
+    f12result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[13].addEventListener('click',function(event) {
+    event.preventDefault();
+    f13result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[14].addEventListener('click',function(event) {
+    event.preventDefault();
+    f14result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[15].addEventListener('click',function(event) {
+    event.preventDefault();
+    f15result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[16].addEventListener('click',function(event) {
+    event.preventDefault();
+    f16result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[17].addEventListener('click',function(event) {
+    event.preventDefault();
+    f17result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[18].addEventListener('click',function(event) {
+    event.preventDefault();
+    f18result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[19].addEventListener('click',function(event) {
+    event.preventDefault();
+    f19result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[20].addEventListener('click',function(event) {
+    event.preventDefault();
+    f20result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[21].addEventListener('click',function(event) {
+    event.preventDefault();
+    f21result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[22].addEventListener('click',function(event) {
+    event.preventDefault();
+    f22result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[23].addEventListener('click',function(event) {
+    event.preventDefault();
+    f23result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[24].addEventListener('click',function(event) {
+    event.preventDefault();
+    f24result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[25].addEventListener('click',function(event) {
+    event.preventDefault();
+    f25result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[26].addEventListener('click',function(event) {
+    event.preventDefault();
+    f26result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[27].addEventListener('click',function(event) {
+    event.preventDefault();
+    f34result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[28].addEventListener('click',function(event) {
+    event.preventDefault();
+    f27result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[29].addEventListener('click',function(event) {
+    event.preventDefault();
+    f28result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[30].addEventListener('click',function(event) {
+    event.preventDefault();
+    f29result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[31].addEventListener('click',function(event) {
+    event.preventDefault();
+    f30result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[32].addEventListener('click',function(event) {
+    event.preventDefault();
+    f31result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[33].addEventListener('click',function(event) {
+    event.preventDefault();
+    f32result.select();
+    document.execCommand("copy");
+  })
+document.querySelectorAll('button')[34].addEventListener('click',function(event) {
+    event.preventDefault();
+    f33result.select();
+    document.execCommand("copy");
+  })
+
+ </script>
+</body>
+</html>
